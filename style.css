@@ -82,6 +82,7 @@ button {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-left: auto;
 }
 
 .nav-links a {
@@ -93,8 +94,49 @@ button {
     color: var(--primary);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 24px;
+    flex-shrink: 0;
+}
+
+.language-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--primary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.language-toggle[hidden] {
+    display: none;
+}
+
+.language-toggle:hover {
+    background: var(--surface-alt);
+    border-color: var(--primary);
+}
+
+.language-toggle:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
 .menu-toggle {
     display: none;
+    min-width: 44px;
+    min-height: 44px;
     border: 1px solid var(--border);
     background: var(--surface);
     border-radius: 8px;
@@ -323,6 +365,15 @@ button {
 /* 10. Mobile navigation and hero */
 
 @media (max-width: 768px) {
+    .nav-actions {
+        gap: 8px;
+        margin-left: 12px;
+    }
+
+    .language-toggle {
+        padding-inline: 10px;
+    }
+
     .menu-toggle {
         display: inline-flex;
     }
@@ -336,6 +387,7 @@ button {
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+        margin-left: 0;
         background: var(--surface);
         padding: 12px;
         border: 1px solid var(--border);
