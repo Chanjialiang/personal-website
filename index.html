@@ -1,29 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Developer Portfolio</title>
+    <meta name="description" content="My developer portfolio">
+    <title>DevPortfolio | Personal Website</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to DevPortfolio</h1>
-        <p>Welcome to my personal website.</p>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+
+            <a class="logo" href="#home">Dev<span>Portfolio</span></a>
+
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu"
+                aria-controls="navLinks" aria-expanded="false">
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </nav>
     </header>
 
-    <main>
-        <h2>About Me</h2>
-        <p>I'm learning software engineering and web development.</p>
+    <main id="home">
 
-        <h2>My Projects</h2>
-        <p>My projects will appear here soon.</p>
+        <!-- Hero section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <p class="eyebrow">Hello, welcome to my website</p>
 
-        <button id="helloButton">Click Me!</button>
+                <h1>Building things
+                    <span class="accent">for the web.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I'm a software engineering student learning
+                    web development, backend systems, and
+                    financial technology.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">
+                        View Projects
+                    </a>
+
+                    <a class="button button-secondary" href="#contact">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <span class="card-icon">💻</span>
+                <p class="eyebrow">Currently building</p>
+                <h2>DevPortfolio</h2>
+                <p>
+                    A personal website built with HTML,
+                    CSS, and JavaScript.
+                </p>
+                <span class="status">● In Progress</span>
+            </div>
+        </section>
+
+        <!-- About section -->
+        <section class="section section-alt" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-description">
+                    I'm studying software engineering and
+                    improving my programming skills by building
+                    real projects. I'm especially interested in
+                    backend development and fintech systems.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects section -->
+        <section class="section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    Projects I'm building and planning.
+                </p>
+
+                <div class="project-grid">
+
+                    <article class="project-card">
+                        <span class="project-tag">Web Development</span>
+                        <h3>DevPortfolio</h3>
+                        <p>
+                            My personal developer website
+                            with responsive design and a blog.
+                        </p>
+                        <a href="https://github.com/chanjialiang/devportfolio" target="_blank"
+                            rel="noopener noreferrer">
+                            View Code →
+                        </a>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-tag">Planned · Java</span>
+                        <h3>MiniBank</h3>
+                        <p>
+                            A planned Java backend project
+                            to practice financial transactions
+                            and account management.
+                        </p>
+                        <span class="project-status">Coming Soon</span>
+                    </article>
+
+                    <article class="project-card">
+                        <span class="project-tag">Planned · Learning</span>
+                        <h3>Coding Notes</h3>
+                        <p>
+                            A planned collection of notes about
+                            Java, databases, and software
+                            engineering.
+                        </p>
+                        <span class="project-status">Coming Soon</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills section -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <h2 class="section-title">My Skills</h2>
+
+                <ul class="skill-list">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Interested in my projects?
+                    You can find my code on GitHub.
+                </p>
+
+                <a class="button button-primary" href="https://github.com/chanjialiang" target="_blank"
+                    rel="noopener noreferrer">
+                    Visit My GitHub
+                </a>
+            </div>
+        </section>
+
     </main>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> DevPortfolio.
+                Built with HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+
 </body>
-</html>
 
 </html>
